@@ -9,7 +9,7 @@ import java.io.IOException;
 @WebServlet(name="pizzaOrderServlet", urlPatterns = "/pizza")
 public class PizzaOrderServlet extends HttpServlet{
         @Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+            protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("/pizza-form.jsp").forward(req, resp);
         }
 

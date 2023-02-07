@@ -1,32 +1,24 @@
 import java.io.Serializable;
 
 public class Quote implements Serializable {
-    private int id;
-    private String content;
+    private long id;
     private Author author;
+    private String content;
 
     public Quote() {}
 
-    public Quote(int id, String content, Author author) {
+    public Quote(long id, Author author, String content) {
         this.id = id;
-        this.content = content;
         this.author = author;
+        this.content = content;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
     }
 
     public Author getAuthor() {
@@ -37,12 +29,20 @@ public class Quote implements Serializable {
         this.author = author;
     }
 
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
     @Override
     public String toString() {
         return "Quote{" +
                 "id=" + id +
-                ", content='" + content + '\'' +
                 ", author=" + author +
+                ", content='" + content + '\'' +
                 '}';
     }
 }

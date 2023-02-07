@@ -46,4 +46,14 @@ public class Album implements Serializable {
     public void setReleaseYear(int releaseYear) {
         this.releaseYear = releaseYear;
     }
+
+    @Override
+    public String toString() {
+        return "Album{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", artistId=" + artistId +
+                ", releaseYear=" + releaseYear +
+                '}';
+    }
 }

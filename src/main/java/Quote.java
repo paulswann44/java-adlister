@@ -36,4 +36,13 @@ public class Quote implements Serializable {
     public void setAuthor(Author author) {
         this.author = author;
     }
+
+    @Override
+    public String toString() {
+        return "Quote{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                ", author=" + author +
+                '}';
+    }
 }
